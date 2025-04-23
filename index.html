@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador Edo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo" style="text-align: center; margin-bottom: 20px;">
+      <img src="/Enlaces/logo.png" alt="Logo Edo" style="max-width: 150px;" />
+    </div>
+
+    <h1 style="text-align: left; color: #003366;">Edo <span>Simulador</span></h1>
+
+    <div class="box">
+      <div class="section-title-full">Datos Generales</div>
+
+      <label>Razón social, NIT</label>
+      <input type="text" id="nit" />
+
+      <label>Nombre de la finca</label>
+      <input type="text" id="nombreFinca" />
+
+      <label>Tipo de explotación</label>
+      <select id="explotacion">
+        <option value="">Seleccione</option>
+        <option value="Cría">Cría</option>
+        <option value="Levante-Ceba">Levante-Ceba</option>
+        <option value="Ciclo Completo">Ciclo Completo</option>
+        <option value="Leche">Leche</option>
+      </select>
+
+      <label>Número de animales</label>
+      <input type="number" id="animales" />
+
+      <label>¿La decisión de compra es simple o compleja?</label>
+      <select id="decisionCompra">
+        <option value="">Seleccione</option>
+        <option value="Simple">Simple</option>
+        <option value="Compleja">Compleja</option>
+      </select>
+
+      <label>¿Quién toma la decisión?</label>
+      <input type="text" id="quienToma" />
+
+      <label>Criterio de compra</label>
+      <select id="criterio">
+        <option value="">Seleccione</option>
+        <option value="Bajo precio">Bajo precio</option>
+        <option value="Tradición">Tradición</option>
+        <option value="Percepción">Percepción</option>
+        <option value="Comparativo de composición">Comparativo de composición</option>
+        <option value="Recomendación (quién)">Recomendación (quién)</option>
+        <option value="Resultados (miden y comparan)">Resultados (miden y comparan)</option>
+      </select>
+
+      <label>¿Pesa o mide?</label>
+      <select id="pesaMide">
+        <option value="">Seleccione</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Almacén por dónde compra</label>
+      <input type="text" id="almacenCompra" />
+    </div>
+
+    <div class="box">
+      <div class="section-title-full">Producto Vitaminas - Minerales</div>
+
+      <label>Producto utilizado</label>
+      <select id="productoVitaminas">
+        <option value="">Seleccione</option>
+        <option value="Crecedor">Crecedor</option>
+        <option value="Engordador">Engordador</option>
+        <option value="Vitaminador">Vitaminador</option>
+      </select>
+
+      <label>Costo del producto (frasco de 500)</label>
+      <input type="number" id="costoVitaminas" />
+
+      <label>Dosis</label>
+      <input type="number" id="dosisVitaminas" readonly />
+
+      <label>Número de aplicaciones al año</label>
+      <input type="number" id="aplicacionesVitaminas" />
+    </div>
+
+    <button class="button" onclick="confirmar()">Confirmar</button>
+
+    <!-- Panel de resumen -->
+    <div id="panelResumen" class="slide-panel">
+      <div class="slide-header">
+        <img src="/Enlaces/logo.png" alt="Logo Edo" class="logo-slide" />
+        <h2>Ficha cliente y resultados</h2>
+        <button class="button close-button" onclick="cerrarResumen()">Volver</button>
+      </div>
+      <div id="contenidoResumen" class="slide-content"></div>
+      <button class="button download-button" onclick="descargarPDF()">Descargar PDF</button>
+    </div>
+  </div>
+
+  <!-- Contenedor invisible para html2pdf -->
+  <div id="contenedorPdf" style="visibility: hidden; position: absolute; top: 0; left: 0; z-index: -1;"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

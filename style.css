@@ -1,0 +1,147 @@
+body {
+  font-family: Poppins;
+  background-color: #f2f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.section-title-full {
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.box {
+  background-color: #f9fbfc;
+  border: 1px solid #d9e2ec;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 5px;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[readonly] {
+  background-color: #eaeaea;
+}
+
+.button {
+  background-color: #003366;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #005299;
+}
+
+.output {
+  background-color: #eaf0f8;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  color: #003366;
+  font-weight: 500;
+}
+/* Estilos existentes... */
+
+.slide-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 700px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.5s ease-in-out;
+  z-index: 999;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.slide-panel.open {
+  right: 0;
+}
+
+.slide-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-slide {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.slide-header h2 {
+  color: #003366;
+  margin: 0;
+  font-size: 22px;
+}
+
+.slide-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.close-button {
+  float: right;
+  background-color: #ccc;
+  color: black;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.download-button {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #007bff;
+  color: white;
+}
